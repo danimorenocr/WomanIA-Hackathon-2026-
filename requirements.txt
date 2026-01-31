@@ -1,6 +1,5 @@
-torch==2.0.1
-transformers==4.37.2
-sentencepiece
+openai>=1.40.0
+python-dotenv>=1.0.1
 shap
 scikit-learn
 joblib

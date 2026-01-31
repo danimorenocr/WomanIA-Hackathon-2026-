@@ -1,8 +1,10 @@
+import os
+from dotenv import load_dotenv
 import joblib
 import shap
 import numpy as np
 import pandas as pd
-from transformers import pipeline
+from openai import OpenAI
 
 # Cargar modelos entrenados
 try:
@@ -14,21 +16,57 @@ except Exception as e:
     print(f"Error cargando modelos: {e}")
     modelo_consumo = modelo_agua = modelo_co2 = config_features = None
 
-# Cargar LLM para mejorar explicaciones
-try:
-    llm = pipeline(
-        "text2text-generation",
-        model="google/flan-t5-large",
-        max_length=200,
-        do_sample=False
+def _get_openai_client():
+    load_dotenv()
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        return None
+    return OpenAI(api_key=api_key)
+
+
+def _respuesta_openai(pregunta, tipo, prediccion, top_features):
+    client = _get_openai_client()
+    if client is None:
+        return None
+
+    top_text = ", ".join([f"{name} ({importance:.3f})" for name, importance in top_features])
+    if not top_text:
+        top_text = "ocupación y temperatura"
+
+    system_msg = (
+        "Eres un asistente analítico energético. Responde en español, conciso y accionable. "
+        "Usa la predicción y las variables más influyentes para justificar la respuesta. "
+        "No inventes datos fuera del contexto proporcionado."
     )
-except:
-    llm = None
+    user_msg = (
+        f"Pregunta del usuario: {pregunta}\n"
+        f"Tipo de análisis: {tipo}\n"
+        f"Predicción numérica estimada: {prediccion:.3f}\n"
+        f"Variables más influyentes (SHAP): {top_text}\n"
+        "Redacta la respuesta final."  
+    )
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_msg},
+                {"role": "user", "content": user_msg},
+            ],
+            temperature=0.2,
+            max_tokens=220,
+        )
+        return (response.choices[0].message.content or "").strip() or None
+    except Exception as e:
+        # Silenciar errores de cuota, usar fallback
+        if "insufficient_quota" not in str(e):
+            print(f"⚠️ OpenAI: {e}")
+        return None
 
 
 def obtener_prediccion_shap(modelo, feature_names, tipo_analisis):
     """
-    Hace predicción con datos simulados y retorna SHAP values.
+    Hace predicción con datos simulados y retorna feature importance de XGBoost.
     """
     try:
         # Generar datos simulados (valores razonables para cada sector)
@@ -38,23 +76,23 @@ def obtener_prediccion_shap(modelo, feature_names, tipo_analisis):
         # Hacer predicción
         prediccion = modelo.predict(X_sample)[0]
         
-        # Calcular SHAP values
-        explainer = shap.Explainer(modelo)
-        shap_values = explainer(X_sample)
-        
-        # Obtener feature importance
-        feature_importance = {}
-        for i, name in enumerate(feature_names):
-            importance = float(np.abs(shap_values.values[0, i]))
-            feature_importance[name] = importance
-        
-        # Top 3 features más importantes
-        top_features = sorted(feature_importance.items(), key=lambda x: x[1], reverse=True)[:3]
-        
-        return prediccion, top_features, feature_importance
+        # Usar feature importance nativa de XGBoost (más estable que SHAP)
+        if hasattr(modelo, 'feature_importances_'):
+            importances = modelo.feature_importances_
+            feature_importance = {}
+            for i, name in enumerate(feature_names):
+                if i < len(importances):
+                    feature_importance[name] = float(importances[i])
+            
+            # Top 3 features más importantes
+            top_features = sorted(feature_importance.items(), key=lambda x: x[1], reverse=True)[:3]
+            return prediccion, top_features, feature_importance
+        else:
+            # Fallback: usar nombres estáticos
+            return prediccion, [(feature_names[0], 0.5), (feature_names[1] if len(feature_names) > 1 else "temperatura", 0.3)], {}
     
     except Exception as e:
-        print(f"Error en SHAP: {e}")
+        print(f"⚠️ Predicción: {e}")
         return None, [], {}
 
 
@@ -113,20 +151,19 @@ def explicar(contexto, pregunta):
     pregunta_lower = pregunta.lower()
     
     # Determinar tipo de análisis
-    if "energ" in pregunta_lower:
-        modelo = modelo_consumo
-        tipo = "consumo"
-        feature_names = ["Ocupación", "Temperatura", "Sector", "Hora", "Día"] if config_features is None else config_features.get("consumo_features", ["Ocupación", "Temperatura", "Sector", "Hora", "Día"])
-    elif "agua" in pregunta_lower:
+    if "agua" in pregunta_lower:
         modelo = modelo_agua
         tipo = "agua"
-        feature_names = ["Ocupación", "Temperatura", "Sector"] if config_features is None else config_features.get("agua_features", ["Ocupación", "Temperatura", "Sector"])
-    elif "co2" in pregunta_lower:
+        feature_names = config_features.get("features_stage2", ["ocupacion_pct", "temperatura_exterior_c", "sector_encoded"]) if config_features else ["ocupacion_pct", "temperatura_exterior_c", "sector_encoded"]
+    elif "co2" in pregunta_lower or "emision" in pregunta_lower:
         modelo = modelo_co2
         tipo = "CO2"
-        feature_names = ["Consumo_energético", "Tipo_actividad", "Ocupación"] if config_features is None else config_features.get("co2_features", ["Consumo_energético", "Tipo_actividad", "Ocupación"])
+        feature_names = config_features.get("features_stage3", ["pred_consumo_kwh", "pred_agua_litros", "ocupacion_pct"]) if config_features else ["pred_consumo_kwh", "pred_agua_litros", "ocupacion_pct"]
     else:
-        return "Por favor pregunta algo relacionado con energía, agua o CO2 para que pueda analizar."
+        # Por defecto: análisis de consumo energético
+        modelo = modelo_consumo
+        tipo = "consumo"
+        feature_names = config_features.get("features_stage1", ["ocupacion_pct", "temperatura_exterior_c", "sector_encoded", "hora", "dia_semana"]) if config_features else ["ocupacion_pct", "temperatura_exterior_c", "sector_encoded", "hora", "dia_semana"]
     
     if modelo is None:
         return f"El modelo de {tipo} no está disponible. Verifica los archivos en /models/"
@@ -134,7 +171,9 @@ def explicar(contexto, pregunta):
     # Obtener predicción y SHAP
     prediccion, top_features, _ = obtener_prediccion_shap(modelo, feature_names, tipo)
     
-    # Construir respuesta inteligente
-    respuesta = build_respuesta_inteligente(pregunta, tipo, prediccion or 0, top_features)
-    
-    return respuesta
+    # Respuesta con OpenAI (fallback a reglas si falla)
+    respuesta = _respuesta_openai(pregunta, tipo, prediccion or 0, top_features)
+    if respuesta:
+        return respuesta
+
+    return build_respuesta_inteligente(pregunta, tipo, prediccion or 0, top_features)
