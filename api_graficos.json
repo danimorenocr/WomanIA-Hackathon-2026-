@@ -1,0 +1,1578 @@
+{
+  "timestamp": "2026-01-31T14:20:17.279248",
+  "graficos": {
+    "consumo_total_por_sede": {
+      "title": "Consumo Energético Total por Sede",
+      "data": [
+        {
+          "sede": "Sogamoso",
+          "consumo_total_kwh": 505195.87,
+          "consumo_promedio_kwh": 7.34
+        },
+        {
+          "sede": "Duitama",
+          "consumo_total_kwh": 497558.4,
+          "consumo_promedio_kwh": 7.23
+        },
+        {
+          "sede": "Tunja",
+          "consumo_total_kwh": 225678.36,
+          "consumo_promedio_kwh": 3.28
+        },
+        {
+          "sede": "Chiquinquirá",
+          "consumo_total_kwh": 170320.45,
+          "consumo_promedio_kwh": 2.47
+        }
+      ]
+    },
+    "tendencias_consumo_por_sede": {
+      "title": "Tendencias de Consumo por Sede (Últimos 30 días)",
+      "data": {
+        "Chiquinquirá": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 97.52
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 99.0
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 90.43
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 52.39
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 36.73
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 100.9
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 98.84
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 97.84
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 99.58
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 89.47
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 50.83
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 36.26
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 100.83
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 99.17
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 131.01
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 98.9
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 26.28
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 52.32
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 30.21
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 101.07
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 110.39
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 98.5
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 98.88
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 92.66
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 60.31
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 36.31
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 98.2
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 107.46
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 152.45
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 102.27
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 1.27
+          }
+        ],
+        "Tunja": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 134.19
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 134.62
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 125.89
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 79.44
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 65.02
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 140.37
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 139.84
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 136.04
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 162.43
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 126.84
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 80.62
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 65.72
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 136.43
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 139.54
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 133.13
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 138.58
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 51.75
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 79.17
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 51.23
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 138.03
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 135.72
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 137.68
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 137.91
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 130.24
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 94.76
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 65.85
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 134.69
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 141.85
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 138.26
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 137.82
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 2.23
+          }
+        ],
+        "Duitama": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 253.02
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 253.4
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 236.46
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 144.28
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 96.05
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 245.76
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 248.2
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 257.68
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 254.85
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 232.59
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 147.68
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 95.72
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 250.15
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 249.42
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 254.27
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 248.92
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 96.11
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 140.03
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 97.29
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 207.65
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 247.39
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 251.98
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 256.48
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 235.04
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 146.76
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 95.64
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 240.87
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 256.84
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 252.34
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 252.54
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 4.16
+          }
+        ],
+        "Sogamoso": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 291.5
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 321.29
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 270.36
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 171.45
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 116.28
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 291.85
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 291.68
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 295.18
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 295.96
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 278.13
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 172.79
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 115.23
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 293.15
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 341.85
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 294.77
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 293.34
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 115.49
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 175.62
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 115.23
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 329.74
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 434.58
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 292.89
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 294.56
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 277.95
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 174.0
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 110.81
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 290.4
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 440.03
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 299.28
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 293.6
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 5.06
+          }
+        ]
+      }
+    },
+    "eficiencia_por_estudiante": {
+      "title": "Eficiencia Energética por Estudiante",
+      "data": [
+        {
+          "sede": "Duitama",
+          "consumo_por_estudiante_kwh": 90.47,
+          "estudiantes": 5500
+        },
+        {
+          "sede": "Chiquinquirá",
+          "consumo_por_estudiante_kwh": 85.16,
+          "estudiantes": 2000
+        },
+        {
+          "sede": "Sogamoso",
+          "consumo_por_estudiante_kwh": 84.2,
+          "estudiantes": 6000
+        },
+        {
+          "sede": "Tunja",
+          "consumo_por_estudiante_kwh": 12.54,
+          "estudiantes": 18000
+        }
+      ]
+    },
+    "emisiones_co2_por_sede": {
+      "title": "Emisiones de CO₂ por Sede",
+      "data": [
+        {
+          "sede": "Sogamoso",
+          "co2_total_toneladas": 101.08,
+          "co2_promedio_kg_hora": 1.47
+        },
+        {
+          "sede": "Duitama",
+          "co2_total_toneladas": 99.56,
+          "co2_promedio_kg_hora": 1.45
+        },
+        {
+          "sede": "Tunja",
+          "co2_total_toneladas": 45.12,
+          "co2_promedio_kg_hora": 0.66
+        },
+        {
+          "sede": "Chiquinquirá",
+          "co2_total_toneladas": 34.06,
+          "co2_promedio_kg_hora": 0.49
+        }
+      ]
+    },
+    "consumo_agua_por_sede": {
+      "title": "Consumo de Agua por Sede",
+      "data": [
+        {
+          "sede": "Tunja",
+          "agua_total_m3": 143945.41,
+          "agua_promedio_litros_hora": 2091.11
+        },
+        {
+          "sede": "Sogamoso",
+          "agua_total_m3": 15753.6,
+          "agua_promedio_litros_hora": 228.88
+        },
+        {
+          "sede": "Duitama",
+          "agua_total_m3": 14488.11,
+          "agua_promedio_litros_hora": 210.39
+        },
+        {
+          "sede": "Chiquinquirá",
+          "agua_total_m3": 3423.62,
+          "agua_promedio_litros_hora": 49.72
+        }
+      ]
+    },
+    "consumo_por_sector": {
+      "title": "Consumo Energético por Sector",
+      "data": [
+        {
+          "sector": "Laboratorios",
+          "consumo_total_kwh": 668207.38
+        },
+        {
+          "sector": "Oficinas",
+          "consumo_total_kwh": 328093.45
+        },
+        {
+          "sector": "Salones",
+          "consumo_total_kwh": 268554.31
+        },
+        {
+          "sector": "Comedores",
+          "consumo_total_kwh": 81510.49
+        },
+        {
+          "sector": "Auditorios",
+          "consumo_total_kwh": 26723.62
+        }
+      ]
+    },
+    "distribucion_consumo_por_sector": {
+      "title": "Distribución de Consumo por Sector",
+      "data": [
+        {
+          "sector": "Laboratorios",
+          "consumo_kwh": 668207.38,
+          "porcentaje": 48.66
+        },
+        {
+          "sector": "Oficinas",
+          "consumo_kwh": 328093.45,
+          "porcentaje": 23.89
+        },
+        {
+          "sector": "Salones",
+          "consumo_kwh": 268554.31,
+          "porcentaje": 19.56
+        },
+        {
+          "sector": "Comedores",
+          "consumo_kwh": 81510.49,
+          "porcentaje": 5.94
+        },
+        {
+          "sector": "Auditorios",
+          "consumo_kwh": 26723.62,
+          "porcentaje": 1.95
+        }
+      ]
+    },
+    "tendencias_consumo_por_sector": {
+      "title": "Tendencias de Consumo por Sector (Últimos 30 días)",
+      "data": {
+        "Comedores": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 45.71
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 47.5
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 46.19
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 32.46
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 13.98
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 47.2
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 47.24
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 47.9
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 46.81
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 46.64
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 33.03
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 13.87
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 48.72
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 46.16
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 46.78
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 47.43
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 13.76
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 33.2
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 14.0
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 47.85
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 45.26
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 47.02
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 46.8
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 47.32
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 33.71
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 13.93
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 48.02
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 48.16
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 46.05
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 47.9
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 1.1
+          }
+        ],
+        "Salones": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 192.69
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 200.81
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 163.3
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 94.23
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 25.52
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 197.24
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 194.99
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 200.49
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 196.5
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 165.38
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 95.96
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 25.39
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 199.0
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 196.97
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 192.91
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 193.65
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 25.41
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 96.88
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 25.76
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 197.07
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 194.75
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 194.88
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 197.02
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 162.34
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 94.45
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 25.76
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 196.12
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 202.05
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 194.15
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 195.82
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 1.07
+          }
+        ],
+        "Laboratorios": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 333.71
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 329.16
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 339.83
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 247.1
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 194.64
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 327.62
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 330.38
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 334.47
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 336.75
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 330.24
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 239.94
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 193.5
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 330.51
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 329.3
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 336.35
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 372.39
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 193.28
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 242.29
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 194.54
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 333.18
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 331.02
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 334.04
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 331.13
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 335.59
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 260.18
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 205.08
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 336.61
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 336.7
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 337.65
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 357.09
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 8.05
+          }
+        ],
+        "Auditorios": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 11.92
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 11.05
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 11.81
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 6.68
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 6.6
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 15.31
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 15.65
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 16.06
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 15.68
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 11.25
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 10.72
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 6.65
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 10.96
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 20.03
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 20.32
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 22.46
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 6.64
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 9.98
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 6.66
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 22.97
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 18.54
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 19.39
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 24.82
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 20.18
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 10.88
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 6.66
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 15.4
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 19.56
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 19.95
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 19.42
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 0.27
+          }
+        ],
+        "Oficinas": [
+          {
+            "fecha": "2025-10-01",
+            "consumo_kwh": 191.67
+          },
+          {
+            "fecha": "2025-10-02",
+            "consumo_kwh": 188.17
+          },
+          {
+            "fecha": "2025-10-03",
+            "consumo_kwh": 170.76
+          },
+          {
+            "fecha": "2025-10-04",
+            "consumo_kwh": 71.03
+          },
+          {
+            "fecha": "2025-10-05",
+            "consumo_kwh": 52.39
+          },
+          {
+            "fecha": "2025-10-06",
+            "consumo_kwh": 191.52
+          },
+          {
+            "fecha": "2025-10-07",
+            "consumo_kwh": 191.01
+          },
+          {
+            "fecha": "2025-10-08",
+            "consumo_kwh": 192.62
+          },
+          {
+            "fecha": "2025-10-09",
+            "consumo_kwh": 194.58
+          },
+          {
+            "fecha": "2025-10-10",
+            "consumo_kwh": 173.25
+          },
+          {
+            "fecha": "2025-10-11",
+            "consumo_kwh": 72.24
+          },
+          {
+            "fecha": "2025-10-12",
+            "consumo_kwh": 52.42
+          },
+          {
+            "fecha": "2025-10-13",
+            "consumo_kwh": 192.84
+          },
+          {
+            "fecha": "2025-10-14",
+            "consumo_kwh": 190.48
+          },
+          {
+            "fecha": "2025-10-15",
+            "consumo_kwh": 192.12
+          },
+          {
+            "fecha": "2025-10-16",
+            "consumo_kwh": 185.99
+          },
+          {
+            "fecha": "2025-10-17",
+            "consumo_kwh": 53.08
+          },
+          {
+            "fecha": "2025-10-18",
+            "consumo_kwh": 72.2
+          },
+          {
+            "fecha": "2025-10-19",
+            "consumo_kwh": 53.0
+          },
+          {
+            "fecha": "2025-10-20",
+            "consumo_kwh": 191.74
+          },
+          {
+            "fecha": "2025-10-21",
+            "consumo_kwh": 189.03
+          },
+          {
+            "fecha": "2025-10-22",
+            "consumo_kwh": 185.65
+          },
+          {
+            "fecha": "2025-10-23",
+            "consumo_kwh": 188.64
+          },
+          {
+            "fecha": "2025-10-24",
+            "consumo_kwh": 170.83
+          },
+          {
+            "fecha": "2025-10-25",
+            "consumo_kwh": 71.25
+          },
+          {
+            "fecha": "2025-10-26",
+            "consumo_kwh": 52.95
+          },
+          {
+            "fecha": "2025-10-27",
+            "consumo_kwh": 188.0
+          },
+          {
+            "fecha": "2025-10-28",
+            "consumo_kwh": 198.52
+          },
+          {
+            "fecha": "2025-10-29",
+            "consumo_kwh": 193.76
+          },
+          {
+            "fecha": "2025-10-30",
+            "consumo_kwh": 189.11
+          },
+          {
+            "fecha": "2025-10-31",
+            "consumo_kwh": 2.24
+          }
+        ]
+      }
+    },
+    "eficiencia_por_sector_y_sede": {
+      "title": "Eficiencia Energética por Sector y Sede",
+      "data": [
+        {
+          "sede": "Chiquinquirá",
+          "sector": "Comedores",
+          "consumo_promedio_kwh": 0.14,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Chiquinquirá",
+          "sector": "Salones",
+          "consumo_promedio_kwh": 0.7,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Chiquinquirá",
+          "sector": "Laboratorios",
+          "consumo_promedio_kwh": 0.73,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Chiquinquirá",
+          "sector": "Auditorios",
+          "consumo_promedio_kwh": 0.08,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Chiquinquirá",
+          "sector": "Oficinas",
+          "consumo_promedio_kwh": 0.78,
+          "consumo_por_m2": 0.0001
+        },
+        {
+          "sede": "Tunja",
+          "sector": "Comedores",
+          "consumo_promedio_kwh": 0.23,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Tunja",
+          "sector": "Salones",
+          "consumo_promedio_kwh": 0.57,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Tunja",
+          "sector": "Laboratorios",
+          "consumo_promedio_kwh": 1.54,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Tunja",
+          "sector": "Auditorios",
+          "consumo_promedio_kwh": 0.07,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Tunja",
+          "sector": "Oficinas",
+          "consumo_promedio_kwh": 0.8,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Duitama",
+          "sector": "Comedores",
+          "consumo_promedio_kwh": 0.41,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Duitama",
+          "sector": "Salones",
+          "consumo_promedio_kwh": 1.37,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Duitama",
+          "sector": "Laboratorios",
+          "consumo_promedio_kwh": 3.58,
+          "consumo_por_m2": 0.0001
+        },
+        {
+          "sede": "Duitama",
+          "sector": "Auditorios",
+          "consumo_promedio_kwh": 0.13,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Duitama",
+          "sector": "Oficinas",
+          "consumo_promedio_kwh": 1.61,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Sogamoso",
+          "sector": "Comedores",
+          "consumo_promedio_kwh": 0.41,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Sogamoso",
+          "sector": "Salones",
+          "consumo_promedio_kwh": 1.26,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Sogamoso",
+          "sector": "Laboratorios",
+          "consumo_promedio_kwh": 3.85,
+          "consumo_por_m2": 0.0001
+        },
+        {
+          "sede": "Sogamoso",
+          "sector": "Auditorios",
+          "consumo_promedio_kwh": 0.11,
+          "consumo_por_m2": 0.0
+        },
+        {
+          "sede": "Sogamoso",
+          "sector": "Oficinas",
+          "consumo_promedio_kwh": 1.58,
+          "consumo_por_m2": 0.0
+        }
+      ]
+    },
+    "costos_operacionales_por_sector": {
+      "title": "Costos Operacionales por Sector",
+      "data": [
+        {
+          "sector": "Laboratorios",
+          "consumo_energia_kwh": 668207.38,
+          "costo_energia_cop": 434334795.92,
+          "consumo_agua_litros": 84847572.55,
+          "costo_agua_cop": 296966503.91,
+          "costo_total_cop": 731301299.83
+        },
+        {
+          "sector": "Oficinas",
+          "consumo_energia_kwh": 328093.45,
+          "costo_energia_cop": 213260741.13,
+          "consumo_agua_litros": 41660618.43,
+          "costo_agua_cop": 145812164.51,
+          "costo_total_cop": 359072905.65
+        },
+        {
+          "sector": "Salones",
+          "consumo_energia_kwh": 268554.31,
+          "costo_energia_cop": 174560299.81,
+          "consumo_agua_litros": 34100463.15,
+          "costo_agua_cop": 119351621.01,
+          "costo_total_cop": 293911920.82
+        },
+        {
+          "sector": "Comedores",
+          "consumo_energia_kwh": 81510.49,
+          "costo_energia_cop": 52981815.95,
+          "consumo_agua_litros": 10350030.7,
+          "costo_agua_cop": 36225107.45,
+          "costo_total_cop": 89206923.4
+        },
+        {
+          "sector": "Auditorios",
+          "consumo_energia_kwh": 26723.62,
+          "costo_energia_cop": 17370351.41,
+          "consumo_agua_litros": 3393308.95,
+          "costo_agua_cop": 11876581.33,
+          "costo_total_cop": 29246932.74
+        }
+      ]
+    },
+    "impacto_ambiental_por_sector": {
+      "title": "Impacto Ambiental por Sector",
+      "data": [
+        {
+          "sector": "Laboratorios",
+          "co2_total_toneladas": 133.67,
+          "agua_total_m3": 84847.57,
+          "consumo_energia_kwh": 668207.38,
+          "equivalente_arboles": 6365.0
+        },
+        {
+          "sector": "Oficinas",
+          "co2_total_toneladas": 65.63,
+          "agua_total_m3": 41660.62,
+          "consumo_energia_kwh": 328093.45,
+          "equivalente_arboles": 3125.0
+        },
+        {
+          "sector": "Salones",
+          "co2_total_toneladas": 53.72,
+          "agua_total_m3": 34100.46,
+          "consumo_energia_kwh": 268554.31,
+          "equivalente_arboles": 2558.0
+        },
+        {
+          "sector": "Comedores",
+          "co2_total_toneladas": 16.31,
+          "agua_total_m3": 10350.03,
+          "consumo_energia_kwh": 81510.49,
+          "equivalente_arboles": 776.0
+        },
+        {
+          "sector": "Auditorios",
+          "co2_total_toneladas": 5.35,
+          "agua_total_m3": 3393.31,
+          "consumo_energia_kwh": 26723.62,
+          "equivalente_arboles": 255.0
+        }
+      ]
+    },
+    "correlacion_ocupacion_consumo": {
+      "title": "Correlación Ocupación vs Consumo",
+      "data": [
+        {
+          "rango_ocupacion": "0-20%",
+          "consumo_promedio_kwh": 2.9,
+          "agua_promedio_litros": 391.26,
+          "co2_promedio_kg": 0.58
+        },
+        {
+          "rango_ocupacion": "20-40%",
+          "consumo_promedio_kwh": 4.55,
+          "agua_promedio_litros": 532.8,
+          "co2_promedio_kg": 0.91
+        },
+        {
+          "rango_ocupacion": "40-60%",
+          "consumo_promedio_kwh": 10.51,
+          "agua_promedio_litros": 1346.37,
+          "co2_promedio_kg": 2.1
+        },
+        {
+          "rango_ocupacion": "60-80%",
+          "consumo_promedio_kwh": 14.45,
+          "agua_promedio_litros": 1727.23,
+          "co2_promedio_kg": 2.87
+        },
+        {
+          "rango_ocupacion": "80-100%",
+          "consumo_promedio_kwh": 16.94,
+          "agua_promedio_litros": 2049.65,
+          "co2_promedio_kg": 3.4
+        }
+      ]
+    },
+    "temperatura_vs_consumo": {
+      "title": "Relación Temperatura vs Consumo Energético",
+      "data": [
+        {
+          "rango_temperatura": "0-10°C",
+          "consumo_promedio_kwh": 2.72
+        },
+        {
+          "rango_temperatura": "10-15°C",
+          "consumo_promedio_kwh": 4.07
+        },
+        {
+          "rango_temperatura": "15-20°C",
+          "consumo_promedio_kwh": 6.6
+        },
+        {
+          "rango_temperatura": "20-25°C",
+          "consumo_promedio_kwh": 8.38
+        },
+        {
+          "rango_temperatura": "25-30°C",
+          "consumo_promedio_kwh": 10.47
+        },
+        {
+          "rango_temperatura": ">30°C",
+          "consumo_promedio_kwh": "NaN"
+        }
+      ]
+    }
+  }
+}
