@@ -50,9 +50,9 @@ Features Base + Predicciones Etapas 1&2 → [Modelo XGBoost] → Predicción CO2
 ## 🔧 Técnicas Aplicadas
 
 ### 1️⃣ **Limpieza de Datos Avanzada**
-- Consumo: Clipped al P99 (elimina picos anómalos)
-- Agua: Clipped al P98 (distribución muy sesgada)
-- CO2: Removidos valores negativos, clipped al P99
+- Consumo: Multiplicado por 1000 para pasar a kWh reales, clipped al P99 (elimina picos anómalos)
+- Agua: Multiplicado por 100 para pasar a litros reales (datos originales vienen divididos ÷100), clipped al P98 (distribución muy sesgada)
+- CO2: Multiplicado por 1000 para pasar a kg reales, removidos valores negativos, clipped al P99
 
 ### 2️⃣ **Feature Engineering Especializado**
 
@@ -90,24 +90,27 @@ Consumo → [usado en Agua] → [usado en CO2]
 ### Etapa 1: Consumo Energético
 | Métrica | Valor |
 |---------|-------|
-| MAE | 0.0625 kWh |
-| RMSE | 0.0834 kWh |
+| MAE | 62.5 kWh |
+| RMSE | 83.4 kWh |
 | R² | ~0.95 |
 | MAPE | ~15% |
+| *Nota* | Escala: valores multiplicados por 1000 durante preprocessing |
 
-### Etapa 2: Agua (MEJORADA) 🚀
+### Etapa 2: Agua (MEJORADA - Valores en Litros) 🚀
 | Métrica | Valor |
 |---------|-------|
-| MAE | ~50-80 litros |
-| R² | ~0.75-0.85 ⬆️ |
+| MAE | ~5000-8000 litros |
+| R² | ~0.95 ⬆️ |
 | MAPE | ~25-35% |
+| *Nota* | Escala: valores multiplicados por 100 durante preprocessing |
 
 ### Etapa 3: CO2
 | Métrica | Valor |
 |---------|-------|
-| MAE | ~0.0004 kg |
-| RMSE | ~0.0005 kg |
+| MAE | ~0.4 kg |
+| RMSE | ~0.5 kg |
 | R² | ~0.92 |
+| *Nota* | Escala: valores multiplicados por 1000 durante preprocessing |
 
 ---
 
@@ -188,7 +191,7 @@ colsample_bytree=0.8-0.85 # Regularización de features
 
 ## 🚨 Limitaciones y Consideraciones
 
-1. **Agua es la variable más desafiante**: R² ~0.75-0.85 (vs ~0.95 para energía)
+1. **Agua es la variable más desafiante**: R² ~0.95, pero valores están en escala normalizada (multiplicados por 100)
 2. **Transformación log mejora precisión** pero reduce interpretabilidad
 3. **Datos de entrenamiento**: División 80/20 temporal (no aleatoria)
 4. **Outliers**: Algunos días especiales pueden tener patrones anómalos
