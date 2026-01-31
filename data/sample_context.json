@@ -1,0 +1,25 @@
+{
+  "consumo_energia": {
+    "prediccion": "Alto",
+    "shap": {
+      "Ocupación": "+42%",
+      "Temperatura exterior": "+21%",
+      "Sector (Laboratorios)": "+18%",
+      "Fin de semana": "-12%"
+    }
+  },
+  "agua": {
+    "prediccion": "Media",
+    "shap": {
+      "Ocupación": "+30%",
+      "Clima": "+15%"
+    }
+  },
+  "co2": {
+    "prediccion": "Alta",
+    "shap": {
+      "Consumo energético": "+55%",
+      "Tipo de actividad": "+20%"
+    }
+  }
+}
