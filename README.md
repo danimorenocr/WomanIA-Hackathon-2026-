@@ -6,33 +6,27 @@ Sistema de predicción y análisis energético para universidades usando Machine
 
 ```
 WomanIA-Hackathon-2026/
-├── api.py                    # API Flask principal (único punto de entrada)
-├── llm_engine.py             # Motor de predicción ML (XGBoost)
+├── api.py                    # API Flask principal
+├── llm_engine.py             # Motor de predicción ML
 ├── generar_graficos.py       # Generador de datos para gráficos
 ├── preguntas_predefinidas.py # Sistema de preguntas naturales
 ├── requirements.txt          # Dependencias Python
 ├── .env                      # Variables de entorno (API keys)
 ├── data/
-│   └── dataset_energia_limpio_sectores.csv  # Datos históricos
+│   └── dataset_energia_limpio_sectores.csv
 └── models/
-    ├── modelo_consumo.pkl    # Modelo energía (XGBoost)
-    ├── modelo_agua_mejorado.pkl # Modelo agua
-    ├── modelo_co2.pkl        # Modelo emisiones CO₂
-    └── config_features.pkl   # Configuración de features
+    ├── modelo_consumo.pkl
+    ├── modelo_agua_mejorado.pkl
+    ├── modelo_co2.pkl
+    └── config_features.pkl
 ```
 
 ## 🚀 Instalación
 
 ```bash
-# Crear entorno virtual
 python -m venv .venv
 .venv\Scripts\activate  # Windows
-
-# Instalar dependencias
 pip install -r requirements.txt
-
-# Configurar API key de Groq (gratis)
-# Editar .env y agregar: GROQ_API_KEY=tu-api-key
 ```
 
 ## ▶️ Ejecutar
@@ -41,19 +35,63 @@ pip install -r requirements.txt
 python api.py
 ```
 
-Servidor disponible en: `http://localhost:5000`
+Servidor: `http://localhost:5000`
 
-## 📡 Endpoints
+---
 
-### Chat con IA (Groq - GRATIS)
-```
-GET  /api/chat-groq?mensaje=Hola
-POST /api/chat-groq  {"mensaje": "¿Cómo ahorrar energía?"}
+## 📡 ENDPOINTS DE LA API
+
+### 🤖 Chat con IA (Groq - GRATIS)
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| GET | `/api/chat-groq?mensaje=Hola` | Chat con query param |
+| POST | `/api/chat-groq` | Chat con body JSON |
+
+**Ejemplo POST:**
+```json
+{"mensaje": "¿Cómo puedo ahorrar energía?"}
 ```
 
-### Predicción ML
+**Respuesta:**
+```json
+{
+    "respuesta": "¡Hola! Para ahorrar energía te recomiendo...",
+    "modelo": "qwen/qwen3-32b"
+}
 ```
-POST /api/predecir
+
+---
+
+### 📊 Gráficos y Análisis
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| GET | `/api/graficos` | **Todos los gráficos en JSON** |
+| GET | `/api/consumo-por-sede` | Consumo total por sede |
+| GET | `/api/tendencias-consumo` | Tendencias últimos 30 días |
+| GET | `/api/eficiencia-estudiante` | Eficiencia por estudiante |
+| GET | `/api/emisiones-co2` | Emisiones CO₂ por sede |
+| GET | `/api/consumo-agua` | Consumo de agua por sede |
+| GET | `/api/temperatura-consumo` | Temperatura vs consumo |
+| GET | `/api/consumo-por-sector` | Consumo por sector |
+| GET | `/api/distribucion-por-sector` | Distribución % por sector |
+| GET | `/api/tendencias-sector` | Tendencias por sector |
+| GET | `/api/eficiencia-sector-sede` | Eficiencia sector × sede |
+| GET | `/api/correlacion-ocupacion` | Ocupación vs consumo |
+| GET | `/api/costos-operacionales` | Costos COP por sector |
+| GET | `/api/impacto-ambiental` | CO₂ + agua + árboles |
+
+---
+
+### 🔮 Predicción ML
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| POST | `/api/predecir` | Predicción completa |
+
+**Body:**
+```json
 {
     "sede_id": 2,
     "sector": "Laboratorios",
@@ -64,20 +102,33 @@ POST /api/predecir
 }
 ```
 
-### Gráficos y Análisis
-| Endpoint | Descripción |
-|----------|-------------|
-| `/api/graficos` | Todos los gráficos |
-| `/api/consumo-por-sede` | Consumo por sede |
-| `/api/consumo-por-sector` | Consumo por sector |
-| `/api/emisiones-co2` | Emisiones CO₂ |
-| `/api/costos-operacionales` | Costos COP |
-
-### Preguntas Naturales
+**Respuesta:**
+```json
+{
+    "energia_kwh": 1250.45,
+    "agua_litros": 3500.20,
+    "co2_kg": 425.30,
+    "sede": "Tunja",
+    "sector": "Laboratorios"
+}
 ```
-POST /api/chat
+
+---
+
+### 💬 Preguntas Naturales
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| GET | `/api/preguntas` | Lista de preguntas predefinidas |
+| POST | `/api/responder-pregunta` | Responder por ID |
+| POST | `/api/chat` | Chat para predicciones |
+
+**Ejemplo:**
+```json
 {"pregunta": "¿Cuánta energía consumirá el laboratorio de la sede 3 mañana a las 5pm?"}
 ```
+
+---
 
 ## 🏢 Sedes
 
@@ -96,13 +147,15 @@ POST /api/chat
 - Auditorios
 - Oficinas
 
+---
+
 ## 🔑 Configuración (.env)
 
 ```env
 GROQ_API_KEY=tu-groq-api-key-aqui
 ```
 
-Obtén tu API key gratis en: https://console.groq.com/keys
+Obtén tu API key gratis: https://console.groq.com/keys
 
 ## 📊 Tecnologías
 
